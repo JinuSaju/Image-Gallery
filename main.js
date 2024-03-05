@@ -14,8 +14,6 @@ const alts = {
   'pic3.jpg' : 'Raze',
   'pic4.jpg' : 'Omen',
   'pic5.jpg' : 'Jett'
-
-
 }
 
 

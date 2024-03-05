@@ -8,11 +8,11 @@ const overlay = document.querySelector('.overlay');
 
 const images = ['pic1.jpg', `pic2.jpg`, `pic3.jpg`, `pic4.jpg`, `pic5.jpg`];
 const alts = {
-  'pic1.jpg' : 'Jett',
-  'pic2.jpg' : 'Yoru',
-  'pic3.jpg' : 'Phoenix',
-  'pic4.jpg' : 'Raze',
-  'pic5.jpg' : 'Omen'
+  'pic1.jpg' : 'Yoru',
+  'pic2.jpg' : 'Phoenix',
+  'pic3.jpg' : 'Raze',
+  'pic4.jpg' : 'Omen',
+  'pic5.jpg' : 'Jett'
 
 
 }

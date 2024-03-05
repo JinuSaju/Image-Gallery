@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
@@ -6,7 +7,7 @@ const overlay = document.querySelector('.overlay');
 
 
 
-const images = ['pic1.jpg', `pic2.jpg`, `pic3.jpg`, `pic4.jpg`, `pic5.jpg`];
+const images = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"];
 const alts = {
   'pic1.jpg' : 'Yoru',
   'pic2.jpg' : 'Phoenix',
@@ -19,27 +20,24 @@ const alts = {
 
 
 
-for (const image of images) {
-  const newImage = document.createElement('img');
-  newImage.setAttribute('src', `images/${image}`);
-  newImage.setAttribute('alt', alts[image]);
-  thumbBar.appendChild(newImage);
-  newImage.addEventListener('click', e => {
-    displayedImage.src = e.target.src;
-    displayedImage.alt = e.target.alt;
-  });
-}
+images.forEach(image => {
+      const thumbImg = document.createElement("img");
+      thumbImg.setAttribute("src", image);
+      thumbImg.setAttribute("alt", alts[image.split('/').pop()]);
+      thumbImg.addEventListener("click", function() {
+        displayedImg.setAttribute("src", image);
+      });
+      thumbBar.appendChild(thumbImg);
+    });
+  
 
-
-btn.addEventListener('click', () => {
-  const btnClass = btn.getAttribute('class');
-  if (btnClass === 'dark') {
-    btn.setAttribute('class','light');
-    btn.textContent = 'Lighten';
-    overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
-  } else {
-    btn.setAttribute('class','dark');
-    btn.textContent = 'Darken';
-    overlay.style.backgroundColor = 'rgba(0,0,0,0)';
-  }
+    darkBtn.addEventListener("click", function() {
+      if (overlay.style.display === "none" || overlay.style.display === "") {
+        overlay.style.display = "block";
+        darkBtn.textContent = "Undarken";
+      } else {
+        overlay.style.display = "none";
+        darkBtn.textContent = "Darken";
+      }
+    });
 });

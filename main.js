@@ -6,7 +6,7 @@ const overlay = document.querySelector('.overlay');
 
 
 
-const images = ['pic1.jpg', `pic2.jpg`, `pic3.jpg`, `pic4.jpg`, `pic5.jpg`];
+const image = ['pic1.jpg', `pic2.jpg`, `pic3.jpg`, `pic4.jpg`, `pic5.jpg`];
 const alts = {
   'pic1.jpg' : 'Yoru',
   'pic2.jpg' : 'Phoenix',
@@ -19,9 +19,9 @@ const alts = {
 
 
 
-for (const image of images) {
+for (const image of image) {
   const newImage = document.createElement('img');
-  newImage.setAttribute('src', `images/${image}`);
+  newImage.setAttribute('src', `image/${image}`);
   newImage.setAttribute('alt', alts[image]);
   thumbBar.appendChild(newImage);
   newImage.addEventListener('click', e => {

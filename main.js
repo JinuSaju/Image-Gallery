@@ -14,7 +14,7 @@
     <h1>Valorant gallery</h1>
 
     <div class="full-img">
-      <img class="displayed-img" src="images/pic1.jpg" alt="Closeup of a human eye">
+      <img class="displayed-img" src="images/pic1.jpg" alt="Desktop wallpaper">
       <div class="overlay"></div>
       <button class="dark">Darken</button>
     </div>
